@@ -11,4 +11,4 @@ RUN yum update -y && yum install yum-utils -y && \
     yum clean all
     
 RUN yum install -y puppet-$PUPPET_VERSION \
-    && yum clean all
+    && yum clean all && uname -a && cat /etc/redhat-release
