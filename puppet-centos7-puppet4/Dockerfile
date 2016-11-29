@@ -10,5 +10,5 @@ RUN yum update -y && yum install yum-utils -y && \
     yum-config-manager --enable centosplus >& /dev/null && \
     yum clean all
     
-RUN yum install -y puppet-agent-$PUPPET_VERSION \
+RUN yum install -y puppet-agent \
     && yum clean all && uname -a && cat /etc/redhat-release &&  puppet --version
