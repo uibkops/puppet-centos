@@ -11,4 +11,4 @@ RUN yum update -y && yum install yum-utils -y && \
     yum clean all
     
 RUN yum install -y puppet-agent \
-    && yum clean all && uname -a && cat /etc/redhat-release &&  puppet --version
+    && yum clean all && uname -a && cat /etc/redhat-release && export PATH=/opt/puppetlabs/bin:$PATH &&  puppet --version
