@@ -6,7 +6,7 @@ ENV PUPPET_VERSION 3.8.7
 RUN rpm --import https://yum.puppetlabs.com/RPM-GPG-KEY-puppetlabs && \
     rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
 
-RUN yum update -y && yum install yum-utils -y && \
+RUN yum update -y && yum install yum-utils rubygem-deep_merge -y && \
     yum-config-manager --enable centosplus >& /dev/null && \
     yum clean all
     
